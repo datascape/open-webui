@@ -5,7 +5,7 @@
 describe('Settings', () => {
 	// Check if the SKIP_OLLAMA_TESTS environment variable is set to 'true'
 	before(() => {
-		if (Cypress.env('SKIP_OLLAMA_TESTS') === 'true') {
+		if (Cypress.env.SKIP_OLLAMA_TESTS) {
 			cy.log('Skipping all tests in the Settings suite');
 			this.skip();
 		}

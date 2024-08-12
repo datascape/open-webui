@@ -51,7 +51,7 @@ jobs:
           wait-on: 'http://localhost:3000'
           config: baseUrl=http://localhost:3000
         env:
-          SKIP_OLLAMA_TESTS: 'true'
+          SKIP_OLLAMA_TESTS: true
 
       - uses: actions/upload-artifact@v4
         if: always()

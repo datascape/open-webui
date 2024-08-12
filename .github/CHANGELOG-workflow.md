@@ -4,7 +4,7 @@
 
 ### Added
 
-- For all workflow yaml files excluding dependabot.yml and FUNDING.yml, enable github actions on all branches:
+- For `integration-test.yml` enable github actions on all branches:
 
     ```
     on:
