@@ -28,7 +28,10 @@
             SKIP_OLLAMA_TESTS: false
 	}
     ```
+- Updated version to `0.3.13` in `package.json`
+- Targeted all branches `*` in `build-release.yml` for test
 
 ### Removed
 
 - Removed jobs `Wait for Ollama to be up` and `Preload Ollama model` in `integration-test.yml`
+- Disabled `Release to PyPI` workflow
