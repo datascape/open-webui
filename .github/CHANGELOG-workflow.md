@@ -34,4 +34,4 @@
 
 - Commented out jobs `Wait for Ollama to be up` and `Preload Ollama model` in `integration-test.yml`
 - Disabled `Release to PyPI` workflow
-- Commented out line 153 in `backend/apps/images/main.py`
+- Formatted `backend/apps/images/main.py`
