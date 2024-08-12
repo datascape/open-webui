@@ -21,6 +21,13 @@
     ```
 
 - For `cypress/e2e/chat.cy.ts`, added env condition `SKIP_OLLAMA_TESTS`.
+- Added env `SKIP_OLLAMA_TESTS` in `cypress.config.ts`:
+
+    ```
+    env:{
+            SKIP_OLLAMA_TESTS: false
+	}
+    ```
 
 ### Removed
 

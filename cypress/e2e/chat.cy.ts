@@ -3,13 +3,6 @@
 
 // These tests run through the chat flow.
 describe('Settings', () => {
-	// Check if the SKIP_OLLAMA_TESTS environment variable is set to 'true'
-	before(() => {
-		if (Cypress.env.SKIP_OLLAMA_TESTS) {
-			cy.log('Skipping all tests in the Settings suite');
-			this.skip();
-		}
-	});
 
 	// Wait for 2 seconds after all tests to fix an issue with Cypress's video recording missing the last few frames
 	after(() => {
@@ -17,11 +10,16 @@ describe('Settings', () => {
 		cy.wait(2000);
 	});
 
-	beforeEach(() => {
-		// Login as the admin user
-		cy.loginAdmin();
-		// Visit the home page
-		cy.visit('/');
+	beforeEach(function(){
+		if (Cypress.env('SKIP_OLLAMA_TESTS')) {
+			cy.log('Skipping all tests in the Settings suite');
+			this.skip();
+		} else{
+			// Login as the admin user
+			cy.loginAdmin();
+			// Visit the home page
+			cy.visit('/');
+		}
 	});
 
 	context('Ollama', () => {
