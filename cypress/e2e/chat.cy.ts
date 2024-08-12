@@ -3,18 +3,17 @@
 
 // These tests run through the chat flow.
 describe('Settings', () => {
-
 	// Wait for 2 seconds after all tests to fix an issue with Cypress's video recording missing the last few frames
 	after(() => {
 		// eslint-disable-next-line cypress/no-unnecessary-waiting
 		cy.wait(2000);
 	});
 
-	beforeEach(function(){
+	beforeEach(function () {
 		if (Cypress.env('SKIP_OLLAMA_TESTS')) {
 			cy.log('Skipping all tests in the Settings suite');
 			this.skip();
-		} else{
+		} else {
 			// Login as the admin user
 			cy.loginAdmin();
 			// Visit the home page

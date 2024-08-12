@@ -6,28 +6,29 @@
 
 - For `integration-test.yml` enable github actions on all branches:
 
-    ```
-    on:
-    push:
-        branches:
-                - '*'
-    ```
+  ```
+  on:
+  push:
+      branches:
+              - '*'
+  ```
 
 - For `integration-test.yml`, added env under `Cypress run`:
 
-    ```
-    env:
-        SKIP_OLLAMA_TESTS: 'true'
-    ```
+  ```
+  env:
+      SKIP_OLLAMA_TESTS: 'true'
+  ```
 
 - For `cypress/e2e/chat.cy.ts`, added env condition `SKIP_OLLAMA_TESTS`.
 - Added env `SKIP_OLLAMA_TESTS` in `cypress.config.ts`:
 
-    ```
-    env:{
-            SKIP_OLLAMA_TESTS: false
-	}
-    ```
+  ```
+  env:{
+          SKIP_OLLAMA_TESTS: false
+  }
+  ```
+
 - Updated version to `0.3.13` in `package.json`
 
 ### Removed
