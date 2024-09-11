@@ -5,7 +5,4 @@ export default defineConfig({
 		baseUrl: 'http://localhost:8080'
 	},
 	video: true,
-	env: {
-		SKIP_OLLAMA_TESTS: 'false'
-	}
 });
